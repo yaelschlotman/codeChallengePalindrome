@@ -3,37 +3,52 @@ function getUserInput(message) {
 	return prompt(message); 
 }
 
-//function getPhrase() {
-//	var phrase = getUserInput("Enter Phrase.");
-//	console.log("phrase");
-  //  return phrase;	
-//}
- 
+function getPhrase() {
+	var phrase = getUserInput("Enter Phrase.");
+	console.log("phrase");
+	return phrase;	
+}
+
 //getPhrase();
 
 function showLowerCase( ) {
-  	var term = getUserInput("Enter Phrase.");
-  	var lowercase = term.toLowerCase();
-  	console.log(term);
-    console.log(lowercase);
-  	return lowercase;
+	var term = getUserInput("Enter Phrase.");
+	var lowercase = term.toLowerCase();
+	console.log(term);
+	console.log(lowercase);
+	return lowercase;
 }
 
 // showLowerCase(); 
 
-function cleanPhrase(argument) {
+function showElimSpace() {
 	var term = getUserInput("Enter Phrase.");
-  	var lowercase = term.toLowerCase();
-  	var elimSpace = lowercase.replace(" ", "");
-  	console.log(term);
-    console.log(lowercase);
-    console.log(elimSpace);
+    var lowercase = term.toLowerCase();
+	var elimSpace = lowercase.replace(/ /g, "");
+	console.log(term);
+	console.log(lowercase);
+	console.log(elimSpace);
 }
 
-cleanPhrase();
+showElimSpace();
+
+function showElimPunt() {
+	var term = getUserInput("Enter Phrase.");
+	var lowercase = term.toLowerCase();
+	var elimSpace = lowercase.replace(" ", "");
+	var elimPunct = elimSpace.replace(/[*A-Za-z0-9]/, "");
+	console.log(term);
+	console.log(lowercase);
+	console.log(elimSpace);
+
+}
+
+//showElimPunt();
+
+
 
 //function palindromeCheck() {
-	//get term, convert to lower case,  reverse term, compare equality.
+//  reverse term, compare equality.
 //   var term = getTerm().toLowercase;
 //	var clean = 
 //	if (term === reverse) {
