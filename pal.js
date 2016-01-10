@@ -24,26 +24,27 @@ function showLowerCase( ) {
 function showElimSpace() {
 	var term = getUserInput("Enter Phrase.");
     var lowercase = term.toLowerCase();
-	var elimSpace = lowercase.replace(/ /g, "");
+	var elimSpace = lowercase.replace(/\s/g, "");
 	console.log(term);
 	console.log(lowercase);
 	console.log(elimSpace);
 }
 
-showElimSpace();
+//showElimSpace();
 
 function showElimPunt() {
 	var term = getUserInput("Enter Phrase.");
-	var lowercase = term.toLowerCase();
-	var elimSpace = lowercase.replace(" ", "");
-	var elimPunct = elimSpace.replace(/[*A-Za-z0-9]/, "");
+    var lowercase = term.toLowerCase();
+	var elimSpace = lowercase.replace(/\s/g, "");
+	var elimPunct = elimSpace.replace(/\W/g, "");
 	console.log(term);
 	console.log(lowercase);
 	console.log(elimSpace);
+	console.log(elimPunct);
 
 }
 
-//showElimPunt();
+showElimPunt();
 
 
 
