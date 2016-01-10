@@ -19,12 +19,21 @@ function showLowerCase( ) {
   	return lowercase;
 }
 
-showLowerCase(); 
-//getPhrase();
-//showLowerCase();
+// showLowerCase(); 
+
+function cleanPhrase(argument) {
+	var term = getUserInput("Enter Phrase.");
+  	var lowercase = term.toLowerCase();
+  	var elimSpace = lowercase.replace(" ", "");
+  	console.log(term);
+    console.log(lowercase);
+    console.log(elimSpace);
+}
+
+cleanPhrase();
 
 //function palindromeCheck() {
-	//get term, convert to lower case, reverse term, compare equality.
+	//get term, convert to lower case,  reverse term, compare equality.
 //   var term = getTerm().toLowercase;
 //	var clean = 
 //	if (term === reverse) {
